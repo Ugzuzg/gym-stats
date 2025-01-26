@@ -1,90 +1,80 @@
 
 //#nbts@code
-type Field =
-  | 'archived_at'
-  | 'repeats'
-  | 'ascendable_id'
-  | 'grading_system'
-  | 'date'
-  | 'style'
-  | 'steepness'
-  | 'perceived_hardness'
-  | 'provider'
-  | 'vl_ascendable_id'
-  | 'path'
-  | 'user_id'
-  | 'vl_user_id'
-  | 'score'
-  | 'eight_a_parent_id'
-  | 'hold_color'
-  | 'exposition'
-  | 'parent_name'
-  | 'comment'
-  | 'shade'
-  | 'eight_a_logbook'
-  | 'project'
-  | 'ascendable_type'
-  | 'recommended'
-  | 'created_at'
-  | 'height'
-  | 'protection'
-  | 'updated_at'
-  | 'ascendable_filter'
-  | 'virtual'
-  | 'eight_a_user_id'
-  | 'ascendable_height'
-  | 'ascendable_name'
-  | 'eight_a_id'
-  | 'difficulty'
-  | 'safety_issues'
-  | 'eight_a_ascendable_id'
-  | 'type'
-  | 'vl_parent_id'
-  | 'parent_id'
-  | 'tries'
-  | 'repeat'
-  | 'grade'
-  | 'sits'
-  | 'id'
-  | 'rating'
-  | 'features'
-  | 'vl_id'
-  | 'sub_type';
-
-//#nbts@code
 import { document } from 'jsr:@ry/jupyter-helper';
 import pl from 'npm:nodejs-polars';
 import * as Plot from 'npm:@observablehq/plot';
 let { html, md, display } = Deno.jupyter;
 
 //#nbts@code
+type Seriesify<T extends Record<string, pl.DataType>> = {
+  [key in keyof T]: key extends string ? pl.Series<T[key], key> : pl.Series<T[key]>;
+};
+
+//#nbts@code
+type Ascent = {
+  created_at: pl.Datetime;
+  ascendable_id: pl.Int64;
+  ascendable_name: pl.String;
+  ascendable_type: pl.Categorical; //'GymBoulder';
+  grading_system: pl.Categorical; //'font';
+  grade: pl.String;
+  difficulty: pl.String;
+  type: pl.Categorical; // 'rp' | 'f';
+  sub_type: pl.String;
+  tries: pl.Int64;
+};
+
 let ascents = pl.readJSON('./data/ascents.jsonl', {
   inferSchemaLength: null,
   format: 'lines',
-}) as pl.DataFrame<Record<Field, pl.Series>>;
+}) as pl.DataFrame<Seriesify<Ascent>>;
+
 ascents = ascents
-  //.filter(pl.col('difficulty').gtEq(pl.lit('6C')))
   .withColumns(
-    pl.col('created_at').str.strptime(pl.Datetime, '%Y-%m-%d %H:%M:%S %z').cast(pl.Datetime('ms')),
-    pl.col('updated_at').str.strptime(pl.Datetime, '%Y-%m-%d %H:%M:%S %z').cast(pl.Datetime('ms')),
+    ascents.getColumn('created_at').str.strptime(pl.Datetime, '%Y-%m-%d %H:%M:%S %z').cast(pl.Datetime('ms')),
+    ascents.getColumn('updated_at').str.strptime(pl.Datetime, '%Y-%m-%d %H:%M:%S %z').cast(pl.Datetime('ms')),
+    ascents.getColumn('ascendable_type').cast(pl.Categorical),
+    ascents.getColumn('grading_system').cast(pl.Categorical),
   )
   .withColumns(pl.col('created_at').date.year().alias('year'))
-  .withColumns(pl.col('created_at').date.day().alias('date'));
+  // remove repeat ascents
+  .unique({ subset: 'ascendable_id', keep: 'first' });
 
 //#nbts@code
+ascents.schema
+//#nbts@code
+type Boulder = {
+  id: pl.Int64;
+  route_setter: pl.String;
+  sector_name: pl.String;
+  gym_wall_name: pl.String;
+  set_at: pl.Datetime;
+  route_card_label: pl.String;
+};
+
 let boulders = pl
   .readJSON('./data/gym_boulders.jsonl', {
     inferSchemaLength: null,
     format: 'lines',
   })
-  .withColumn(pl.col('route_card_label').str.slice(0, 3));
+  .withColumns(
+    pl.col('route_card_label').str.slice(0, 3),
+    pl.col('set_at').str.strptime(pl.Datetime, '%Y-%m-%d %H:%M:%S %z').cast(pl.Datetime('ms')),
+    pl.col('id').alias('nid'),
+  ) as pl.DataFrame<Seriesify<Boulder>>;
 
 //#nbts@code
-let detailedAscents = ascents.join(boulders, {
-  leftOn: 'ascendable_id',
-  rightOn: 'id',
-});
+boulders.shape
+//#nbts@code
+let detailedAscents = ascents
+  .join(boulders, {
+    leftOn: 'ascendable_id',
+    rightOn: 'nid',
+  })
+  .sort(pl.col('created_at'));
 
+//#nbts@code
+detailedAscents.toRecords()[0]
 //#nbts@code
 let boulderScores = [
   { score: 12, v: 'VB', font: '2' },
@@ -163,7 +153,7 @@ for (const grouping of groupings) {
     Plot.plot({
       grid: true,
       width: grouping.fx ? baseWidth * 2 : baseWidth,
-      color: { legend: true },
+      color: { legend: true, type: 'categorical' },
       marks: [Plot.frame(), Plot.barY(detailedAscents.toRecords(), Plot.groupX({ y: 'count' }, grouping))],
       x: { type: 'band' },
       document,
@@ -173,10 +163,9 @@ for (const grouping of groupings) {
 
 //#nbts@code
 let sorted = detailedAscents
-  .sort(pl.col('created_at'))
   .withColumns(
-    pl.col('numberDifficulty').min().over(pl.col('created_at').date.strftime('%Y-%m'), 'type').alias('weekDiffMin'),
-    pl.col('numberDifficulty').max().over(pl.col('created_at').date.strftime('%Y-%m'), 'type').alias('weekDiffMax'),
+    pl.col('numberDifficulty').min().over(pl.col('created_at').date.strftime('%Y-%U'), 'type').sub(3).alias('weekDiffMin'),
+    pl.col('numberDifficulty').max().over(pl.col('created_at').date.strftime('%Y-%U'), 'type').alias('weekDiffMax'),
   )
   .toRecords();
 let plot = Plot.plot({
@@ -190,8 +179,14 @@ let plot = Plot.plot({
     Plot.frame(),
     ...['redpoint', 'flash'].map((type) =>
       Plot.rectY(
-        sorted.filter((v) => v.type === type),
-        { interval: 'month', x: 'created_at', y1: 'weekDiffMin', y2: 'weekDiffMax', fill: 'type' },
+        sorted.filter(v => v.type === type),
+        {
+          interval: 'week',
+          x: 'created_at',
+          y1: 'weekDiffMin',
+          y2: 'weekDiffMax',
+          fill: 'type',
+        },
       ),
     ),
   ],
