@@ -1,0 +1,334 @@
+{
+  "id": 480823,
+  "name": "Turquoise",
+  "notes": null,
+  "difficulty": "5",
+  "grade": "vl-12",
+  "grading_system": "font",
+  "grade_proposals": [
+    [
+      "vl-1",
+      "2"
+    ],
+    [
+      "vl-2",
+      "2+"
+    ],
+    [
+      "vl-3",
+      "3-"
+    ],
+    [
+      "vl-4",
+      "3"
+    ],
+    [
+      "vl-5",
+      "3+"
+    ],
+    [
+      "vl-6",
+      "4-"
+    ],
+    [
+      "vl-7",
+      "4"
+    ],
+    [
+      "vl-8",
+      "4+"
+    ],
+    [
+      "vl-9",
+      "5-"
+    ],
+    [
+      "vl-12",
+      "5"
+    ],
+    [
+      "vl-14",
+      "5+"
+    ],
+    [
+      "vl-16",
+      "6A"
+    ],
+    [
+      "vl-17",
+      "6A+"
+    ],
+    [
+      "vl-18",
+      "6B"
+    ],
+    [
+      "vl-19",
+      "6B+"
+    ],
+    [
+      "vl-21",
+      "6C"
+    ],
+    [
+      "vl-22",
+      "6C+"
+    ],
+    [
+      "vl-23",
+      "7A"
+    ],
+    [
+      "vl-24",
+      "7A+"
+    ],
+    [
+      "vl-25",
+      "7B"
+    ],
+    [
+      "vl-26",
+      "7B+"
+    ],
+    [
+      "vl-27",
+      "7C"
+    ],
+    [
+      "vl-28",
+      "7C+"
+    ],
+    [
+      "vl-29",
+      "8A"
+    ],
+    [
+      "vl-30",
+      "8A+"
+    ],
+    [
+      "vl-31",
+      "8B"
+    ],
+    [
+      "vl-32",
+      "8B+"
+    ],
+    [
+      "vl-33",
+      "8C"
+    ],
+    [
+      "vl-34",
+      "8C+"
+    ]
+  ],
+  "steepness": 3,
+  "style": null,
+  "updated_at": "2024-01-29 09:03:09 +0000",
+  "created_at": "2023-12-04 14:23:29 +0000",
+  "set_at": "2023-12-04 14:23:22 +0000",
+  "expiration_date": null,
+  "path": [
+    [
+      383,
+      192
+    ],
+    [
+      640,
+      178
+    ],
+    [
+      715,
+      568
+    ],
+    [
+      676,
+      545
+    ],
+    [
+      504,
+      520
+    ],
+    [
+      385,
+      542
+    ],
+    [
+      383,
+      193
+    ]
+  ],
+  "reference_width": 971,
+  "line_number": 1,
+  "topo_num": "41801.1.",
+  "color_1": "#87ccc6",
+  "color_2": null,
+  "two_start_holds": null,
+  "sit_down_start": null,
+  "traverse": false,
+  "sector_name": "Bouldering",
+  "sector_id": 219,
+  "archived": true,
+  "hold_manufacturer": null,
+  "gym_wall_id": 734,
+  "gym_wall_name": "B Sektionen",
+  "stats": {
+    "video_count": 0,
+    "zlag_count": 8,
+    "comment_count": 0,
+    "rating": 3,
+    "ratings_count": 1,
+    "redpoint": 1,
+    "onsight": 0,
+    "flash": 7,
+    "toprope": 0,
+    "go": 0,
+    "safety": 0,
+    "slab": 0,
+    "vertical": 0,
+    "overhanging": 0,
+    "roof": 0,
+    "hard_count": 0,
+    "soft_count": 0,
+    "zlaggable_height_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0
+    },
+    "safety_issues_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0,
+      "64": 0
+    },
+    "t": 0,
+    "f": 0,
+    "b": 0,
+    "e": 0,
+    "c": 0,
+    "s": 0
+  },
+  "gym": {
+    "id": 69,
+    "name": "Klättercentret Solna",
+    "town": "Solna",
+    "country": "Sweden",
+    "difficulties": {
+      "vl-1": 0,
+      "vl-2": 0,
+      "vl-3": 0,
+      "vl-4": 0,
+      "vl-5": 0,
+      "vl-6": 5,
+      "vl-7": 4,
+      "vl-8": 4,
+      "vl-9": 7,
+      "vl-10": 0,
+      "vl-11": 0,
+      "vl-12": 2,
+      "vl-13": 0,
+      "vl-14": 11,
+      "vl-15": 0,
+      "vl-16": 11,
+      "vl-17": 9,
+      "vl-18": 9,
+      "vl-19": 8,
+      "vl-20": 0,
+      "vl-21": 10,
+      "vl-22": 5,
+      "vl-23": 6,
+      "vl-24": 4,
+      "vl-25": 4,
+      "vl-26": 2,
+      "vl-27": 3,
+      "vl-28": 2,
+      "vl-29": 1,
+      "vl-30": 1,
+      "vl-31": 0,
+      "vl-32": 0,
+      "vl-33": 0,
+      "vl-34": 0,
+      "vl-35": 0,
+      "vl-36": 0,
+      "vl-37": 0,
+      "vl-38": 0,
+      "vl-39": 0
+    },
+    "difficulties_bouldering": {
+      "vl-1": 0,
+      "vl-2": 0,
+      "vl-3": 0,
+      "vl-4": 2,
+      "vl-5": 3,
+      "vl-6": 0,
+      "vl-7": 5,
+      "vl-8": 5,
+      "vl-9": 0,
+      "vl-10": 0,
+      "vl-11": 0,
+      "vl-12": 8,
+      "vl-13": 0,
+      "vl-14": 5,
+      "vl-15": 0,
+      "vl-16": 9,
+      "vl-17": 8,
+      "vl-18": 7,
+      "vl-19": 12,
+      "vl-20": 0,
+      "vl-21": 13,
+      "vl-22": 9,
+      "vl-23": 9,
+      "vl-24": 7,
+      "vl-25": 8,
+      "vl-26": 6,
+      "vl-27": 6,
+      "vl-28": 4,
+      "vl-29": 4,
+      "vl-30": 1,
+      "vl-31": 0,
+      "vl-32": 0,
+      "vl-33": 0,
+      "vl-34": 0
+    },
+    "item_type": "gym",
+    "cover": "f85eaa2db48218e30ff6f8fe4197df56",
+    "share_url": "https://zlag.vertical-life.info/en/gyms/klattercentret-solna",
+    "latitude": 59.3569,
+    "longitude": 18.0162,
+    "sportclimbing_grading_system": "french",
+    "bouldering_grading_system": "font",
+    "updated_at": "2019-12-04 08:30:11 +0000",
+    "published_at": "2018-08-31 07:00:00 +0000",
+    "created_at": "2018-06-21 09:50:35 +0000",
+    "boulder_count": 131,
+    "route_count": 108,
+    "ascent_count": 55969,
+    "categories": 24,
+    "logo": "ce68d672c98919d65f4311f9c9d9bb47",
+    "sponsor_logo": null,
+    "elegible_for_boulder_training": true,
+    "virtual": false,
+    "gym_status": {
+      "checkins_enabled": false,
+      "temporarily_closed": false
+    },
+    "published": true
+  },
+  "gym_id": 69,
+  "share_url": "https://zlag.vertical-life.info/en/routes/9167ef179febc84d3541643cac5192b4",
+  "route_card_label": "B1.",
+  "parent_name": "Bouldering, B Sektionen",
+  "virtual": false,
+  "topo": "1e2bd49546a1ab26033e6eca6a575fad",
+  "route_setter": "Benjamin Schlobohm",
+  "display_route_setter": true,
+  "item_type": "gym_boulder",
+  "gallery": []
+}

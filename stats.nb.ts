@@ -41,8 +41,6 @@ ascents = ascents
   .unique({ subset: 'ascendable_id', keep: 'first' });
 
 //#nbts@code
-ascents.schema
-//#nbts@code
 type Boulder = {
   id: pl.Int64;
   route_setter: pl.String;
@@ -63,8 +61,6 @@ let boulders = pl
     pl.col('id').alias('nid'),
   ) as pl.DataFrame<Seriesify<Boulder>>;
 
-//#nbts@code
-boulders.shape
 //#nbts@code
 let detailedAscents = ascents
   .join(boulders, {

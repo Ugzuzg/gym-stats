@@ -1,0 +1,354 @@
+{
+  "id": 491531,
+  "name": "Purple",
+  "notes": null,
+  "difficulty": "6A",
+  "grade": "vl-16",
+  "grading_system": "font",
+  "grade_proposals": [
+    [
+      "vl-1",
+      "2"
+    ],
+    [
+      "vl-2",
+      "2+"
+    ],
+    [
+      "vl-3",
+      "3-"
+    ],
+    [
+      "vl-4",
+      "3"
+    ],
+    [
+      "vl-5",
+      "3+"
+    ],
+    [
+      "vl-6",
+      "4-"
+    ],
+    [
+      "vl-7",
+      "4"
+    ],
+    [
+      "vl-8",
+      "4+"
+    ],
+    [
+      "vl-9",
+      "5-"
+    ],
+    [
+      "vl-12",
+      "5"
+    ],
+    [
+      "vl-14",
+      "5+"
+    ],
+    [
+      "vl-16",
+      "6A"
+    ],
+    [
+      "vl-17",
+      "6A+"
+    ],
+    [
+      "vl-18",
+      "6B"
+    ],
+    [
+      "vl-19",
+      "6B+"
+    ],
+    [
+      "vl-21",
+      "6C"
+    ],
+    [
+      "vl-22",
+      "6C+"
+    ],
+    [
+      "vl-23",
+      "7A"
+    ],
+    [
+      "vl-24",
+      "7A+"
+    ],
+    [
+      "vl-25",
+      "7B"
+    ],
+    [
+      "vl-26",
+      "7B+"
+    ],
+    [
+      "vl-27",
+      "7C"
+    ],
+    [
+      "vl-28",
+      "7C+"
+    ],
+    [
+      "vl-29",
+      "8A"
+    ],
+    [
+      "vl-30",
+      "8A+"
+    ],
+    [
+      "vl-31",
+      "8B"
+    ],
+    [
+      "vl-32",
+      "8B+"
+    ],
+    [
+      "vl-33",
+      "8C"
+    ],
+    [
+      "vl-34",
+      "8C+"
+    ]
+  ],
+  "steepness": 7,
+  "style": null,
+  "updated_at": "2024-03-25 09:18:27 +0000",
+  "created_at": "2024-01-19 07:32:56 +0000",
+  "set_at": "2024-01-19 07:32:48 +0000",
+  "expiration_date": null,
+  "path": [
+    [
+      418,
+      555
+    ],
+    [
+      419,
+      524
+    ],
+    [
+      406,
+      314
+    ],
+    [
+      395,
+      179
+    ],
+    [
+      618,
+      171
+    ],
+    [
+      617,
+      264
+    ],
+    [
+      620,
+      330
+    ],
+    [
+      626,
+      366
+    ],
+    [
+      635,
+      408
+    ],
+    [
+      637,
+      525
+    ],
+    [
+      638,
+      554
+    ],
+    [
+      418,
+      553
+    ]
+  ],
+  "reference_width": 971,
+  "line_number": 2,
+  "topo_num": "41864.2.",
+  "color_1": "#9400d3",
+  "color_2": null,
+  "two_start_holds": null,
+  "sit_down_start": null,
+  "traverse": false,
+  "sector_name": "Bouldering",
+  "sector_id": 222,
+  "archived": true,
+  "hold_manufacturer": null,
+  "gym_wall_id": 747,
+  "gym_wall_name": "Tävlingsväggen, B Sektionen",
+  "stats": {
+    "video_count": 0,
+    "zlag_count": 27,
+    "comment_count": 0,
+    "rating": 3.7,
+    "ratings_count": 3,
+    "redpoint": 4,
+    "onsight": 0,
+    "flash": 23,
+    "toprope": 0,
+    "go": 0,
+    "safety": 0,
+    "slab": 0,
+    "vertical": 0,
+    "overhanging": 0,
+    "roof": 0,
+    "hard_count": 1,
+    "soft_count": 1,
+    "zlaggable_height_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0
+    },
+    "safety_issues_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0,
+      "64": 0
+    },
+    "t": 0,
+    "f": 0,
+    "b": 0,
+    "e": 0,
+    "c": 0,
+    "s": 0
+  },
+  "gym": {
+    "id": 68,
+    "name": "Klättercentret Telefonplan",
+    "town": "Hägersten",
+    "country": "Sweden",
+    "difficulties": {
+      "vl-1": 0,
+      "vl-2": 0,
+      "vl-3": 0,
+      "vl-4": 1,
+      "vl-5": 0,
+      "vl-6": 4,
+      "vl-7": 4,
+      "vl-8": 6,
+      "vl-9": 11,
+      "vl-10": 0,
+      "vl-11": 0,
+      "vl-12": 13,
+      "vl-13": 0,
+      "vl-14": 11,
+      "vl-15": 0,
+      "vl-16": 15,
+      "vl-17": 20,
+      "vl-18": 20,
+      "vl-19": 20,
+      "vl-20": 0,
+      "vl-21": 15,
+      "vl-22": 12,
+      "vl-23": 7,
+      "vl-24": 13,
+      "vl-25": 9,
+      "vl-26": 8,
+      "vl-27": 6,
+      "vl-28": 3,
+      "vl-29": 3,
+      "vl-30": 1,
+      "vl-31": 1,
+      "vl-32": 2,
+      "vl-33": 0,
+      "vl-34": 0,
+      "vl-35": 0,
+      "vl-36": 0,
+      "vl-37": 0,
+      "vl-38": 0,
+      "vl-39": 0
+    },
+    "difficulties_bouldering": {
+      "vl-1": 0,
+      "vl-2": 0,
+      "vl-3": 0,
+      "vl-4": 11,
+      "vl-5": 6,
+      "vl-6": 0,
+      "vl-7": 10,
+      "vl-8": 5,
+      "vl-9": 0,
+      "vl-10": 0,
+      "vl-11": 0,
+      "vl-12": 16,
+      "vl-13": 0,
+      "vl-14": 16,
+      "vl-15": 0,
+      "vl-16": 18,
+      "vl-17": 17,
+      "vl-18": 18,
+      "vl-19": 18,
+      "vl-20": 0,
+      "vl-21": 27,
+      "vl-22": 21,
+      "vl-23": 22,
+      "vl-24": 14,
+      "vl-25": 19,
+      "vl-26": 13,
+      "vl-27": 12,
+      "vl-28": 7,
+      "vl-29": 5,
+      "vl-30": 4,
+      "vl-31": 2,
+      "vl-32": 0,
+      "vl-33": 1,
+      "vl-34": 0
+    },
+    "item_type": "gym",
+    "cover": "9d82416a89f3a76ae6bad993b43ae38b",
+    "share_url": "https://zlag.vertical-life.info/en/gyms/klattercentret-telefonplan",
+    "latitude": 59.2991,
+    "longitude": 17.9916,
+    "sportclimbing_grading_system": "french",
+    "bouldering_grading_system": "font",
+    "updated_at": "2024-07-11 13:25:22 +0000",
+    "published_at": "2018-08-31 07:00:00 +0000",
+    "created_at": "2018-06-21 09:48:56 +0000",
+    "boulder_count": 282,
+    "route_count": 205,
+    "ascent_count": 149256,
+    "categories": 24,
+    "logo": "ce68d672c98919d65f4311f9c9d9bb47",
+    "sponsor_logo": null,
+    "elegible_for_boulder_training": true,
+    "virtual": false,
+    "gym_status": {
+      "checkins_enabled": false,
+      "temporarily_closed": false
+    },
+    "published": true
+  },
+  "gym_id": 68,
+  "share_url": "https://zlag.vertical-life.info/en/routes/2474116e3aaacedb089544b97839718e",
+  "route_card_label": "B2.",
+  "parent_name": "Bouldering, Tävlingsväggen, B Sektionen",
+  "virtual": false,
+  "topo": "47cfdc88ff76a5496e815db26025b1ef",
+  "route_setter": "Anton Cuevas",
+  "display_route_setter": true,
+  "item_type": "gym_boulder",
+  "gallery": []
+}

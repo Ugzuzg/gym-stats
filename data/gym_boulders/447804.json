@@ -1,0 +1,338 @@
+{
+  "id": 447804,
+  "name": "Red",
+  "notes": null,
+  "difficulty": "6A",
+  "grade": "vl-16",
+  "grading_system": "font",
+  "grade_proposals": [
+    [
+      "vl-1",
+      "2"
+    ],
+    [
+      "vl-2",
+      "2+"
+    ],
+    [
+      "vl-3",
+      "3-"
+    ],
+    [
+      "vl-4",
+      "3"
+    ],
+    [
+      "vl-5",
+      "3+"
+    ],
+    [
+      "vl-6",
+      "4-"
+    ],
+    [
+      "vl-7",
+      "4"
+    ],
+    [
+      "vl-8",
+      "4+"
+    ],
+    [
+      "vl-9",
+      "5-"
+    ],
+    [
+      "vl-12",
+      "5"
+    ],
+    [
+      "vl-14",
+      "5+"
+    ],
+    [
+      "vl-16",
+      "6A"
+    ],
+    [
+      "vl-17",
+      "6A+"
+    ],
+    [
+      "vl-18",
+      "6B"
+    ],
+    [
+      "vl-19",
+      "6B+"
+    ],
+    [
+      "vl-21",
+      "6C"
+    ],
+    [
+      "vl-22",
+      "6C+"
+    ],
+    [
+      "vl-23",
+      "7A"
+    ],
+    [
+      "vl-24",
+      "7A+"
+    ],
+    [
+      "vl-25",
+      "7B"
+    ],
+    [
+      "vl-26",
+      "7B+"
+    ],
+    [
+      "vl-27",
+      "7C"
+    ],
+    [
+      "vl-28",
+      "7C+"
+    ],
+    [
+      "vl-29",
+      "8A"
+    ],
+    [
+      "vl-30",
+      "8A+"
+    ],
+    [
+      "vl-31",
+      "8B"
+    ],
+    [
+      "vl-32",
+      "8B+"
+    ],
+    [
+      "vl-33",
+      "8C"
+    ],
+    [
+      "vl-34",
+      "8C+"
+    ]
+  ],
+  "steepness": 15,
+  "style": "a",
+  "updated_at": "2023-09-07 08:10:28 +0000",
+  "created_at": "2023-07-18 07:02:51 +0000",
+  "set_at": "2023-07-18 07:02:39 +0000",
+  "expiration_date": "2023-09-01 07:02:39 +0000",
+  "path": [
+    [
+      943,
+      222
+    ],
+    [
+      886,
+      222
+    ],
+    [
+      817,
+      222
+    ],
+    [
+      814,
+      231
+    ],
+    [
+      791,
+      310
+    ],
+    [
+      848,
+      441
+    ],
+    [
+      847,
+      485
+    ],
+    [
+      942,
+      486
+    ]
+  ],
+  "reference_width": 971,
+  "line_number": 6,
+  "topo_num": "41062.6.",
+  "color_1": "#f02828",
+  "color_2": null,
+  "two_start_holds": null,
+  "sit_down_start": null,
+  "traverse": false,
+  "sector_name": "Bouldering",
+  "sector_id": 203,
+  "archived": true,
+  "hold_manufacturer": null,
+  "gym_wall_id": 671,
+  "gym_wall_name": "A Sektionen",
+  "stats": {
+    "video_count": 0,
+    "zlag_count": 8,
+    "comment_count": 0,
+    "rating": 3,
+    "ratings_count": 2,
+    "redpoint": 0,
+    "onsight": 0,
+    "flash": 8,
+    "toprope": 0,
+    "go": 0,
+    "safety": 0,
+    "slab": 0,
+    "vertical": 0,
+    "overhanging": 0,
+    "roof": 0,
+    "hard_count": 0,
+    "soft_count": 0,
+    "zlaggable_height_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0
+    },
+    "safety_issues_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0,
+      "64": 0
+    },
+    "t": 0,
+    "f": 0,
+    "b": 0,
+    "e": 0,
+    "c": 0,
+    "s": 0
+  },
+  "gym": {
+    "id": 59,
+    "name": "Klättercentret Akalla",
+    "town": "Kista",
+    "country": "Sweden",
+    "difficulties": {
+      "vl-1": 0,
+      "vl-2": 0,
+      "vl-3": 0,
+      "vl-4": 4,
+      "vl-5": 0,
+      "vl-6": 4,
+      "vl-7": 4,
+      "vl-8": 10,
+      "vl-9": 11,
+      "vl-10": 0,
+      "vl-11": 0,
+      "vl-12": 11,
+      "vl-13": 0,
+      "vl-14": 10,
+      "vl-15": 0,
+      "vl-16": 14,
+      "vl-17": 12,
+      "vl-18": 13,
+      "vl-19": 12,
+      "vl-20": 0,
+      "vl-21": 12,
+      "vl-22": 11,
+      "vl-23": 12,
+      "vl-24": 10,
+      "vl-25": 6,
+      "vl-26": 4,
+      "vl-27": 3,
+      "vl-28": 1,
+      "vl-29": 1,
+      "vl-30": 1,
+      "vl-31": 0,
+      "vl-32": 0,
+      "vl-33": 0,
+      "vl-34": 0,
+      "vl-35": 0,
+      "vl-36": 0,
+      "vl-37": 0,
+      "vl-38": 0,
+      "vl-39": 0
+    },
+    "difficulties_bouldering": {
+      "vl-1": 13,
+      "vl-2": 0,
+      "vl-3": 0,
+      "vl-4": 8,
+      "vl-5": 5,
+      "vl-6": 0,
+      "vl-7": 7,
+      "vl-8": 12,
+      "vl-9": 0,
+      "vl-10": 0,
+      "vl-11": 0,
+      "vl-12": 12,
+      "vl-13": 0,
+      "vl-14": 11,
+      "vl-15": 0,
+      "vl-16": 16,
+      "vl-17": 12,
+      "vl-18": 14,
+      "vl-19": 12,
+      "vl-20": 0,
+      "vl-21": 13,
+      "vl-22": 13,
+      "vl-23": 13,
+      "vl-24": 11,
+      "vl-25": 11,
+      "vl-26": 5,
+      "vl-27": 9,
+      "vl-28": 2,
+      "vl-29": 1,
+      "vl-30": 1,
+      "vl-31": 0,
+      "vl-32": 0,
+      "vl-33": 0,
+      "vl-34": 0
+    },
+    "item_type": "gym",
+    "cover": "b74e17c3c1e9de895e9f70729830a135",
+    "share_url": "https://zlag.vertical-life.info/en/gyms/klattercentret-akalla",
+    "latitude": 59.4206,
+    "longitude": 17.9156,
+    "sportclimbing_grading_system": "french",
+    "bouldering_grading_system": "font",
+    "updated_at": "2020-10-26 13:50:52 +0000",
+    "published_at": "2018-08-31 07:00:00 +0000",
+    "created_at": "2018-05-31 10:16:10 +0000",
+    "boulder_count": 201,
+    "route_count": 166,
+    "ascent_count": 95305,
+    "categories": 24,
+    "logo": "ce68d672c98919d65f4311f9c9d9bb47",
+    "sponsor_logo": null,
+    "elegible_for_boulder_training": true,
+    "virtual": false,
+    "gym_status": {
+      "checkins_enabled": false,
+      "temporarily_closed": false
+    },
+    "published": true
+  },
+  "gym_id": 59,
+  "share_url": "https://zlag.vertical-life.info/en/routes/ee9fb8c9086fab501a74200810327219",
+  "route_card_label": "A6.",
+  "parent_name": "Bouldering, A Sektionen",
+  "virtual": false,
+  "topo": "b818aad184eedcc57ca311c2f8e257f7",
+  "route_setter": "Oliver Sjödin",
+  "display_route_setter": true,
+  "item_type": "gym_boulder",
+  "gallery": []
+}
