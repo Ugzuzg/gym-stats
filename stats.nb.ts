@@ -70,7 +70,8 @@ let detailedAscents = ascents
   .sort(pl.col('created_at'));
 
 //#nbts@code
-detailedAscents.toRecords()[0]
+detailedAscents.toRecords()[0];
+
 //#nbts@code
 let boulderScores = [
   { score: 12, v: 'VB', font: '2' },
@@ -115,32 +116,28 @@ html`${detailedAscents.getColumn('route_setter').valueCounts().sort('count', tru
 
 //#nbts@code
 let baseWidth = 640;
+let ascentTypeColorDomain = { domain: ['flash', 'redpoint'], range: ['#ffd800', '#ff5151'] };
 
 //#nbts@code
 let groupings = [
   {
     name: 'Everything',
-    x: 'difficulty',
-    fill: 'difficulty',
+    y: 'difficulty',
+    fill: 'type',
   },
   {
     name: 'By year',
-    x: 'difficulty',
+    y: 'difficulty',
     fy: 'year',
-    fill: 'difficulty',
+    fill: 'type',
   },
   {
-    name: 'By type',
-    x: 'difficulty',
-    fy: 'type',
-    fill: 'difficulty',
-  },
-  {
-    name: 'By year and type',
-    x: 'difficulty',
+    name: 'By route setter',
+    y: 'difficulty',
     fx: 'year',
-    fy: 'type',
-    fill: 'difficulty',
+    fy: 'route_setter',
+    fill: 'type',
+    sort: { fy: '-x', reduce: 'count' },
   },
 ];
 for (const grouping of groupings) {
@@ -149,49 +146,157 @@ for (const grouping of groupings) {
     Plot.plot({
       grid: true,
       width: grouping.fx ? baseWidth * 2 : baseWidth,
-      color: { legend: true, type: 'categorical' },
-      marks: [Plot.frame(), Plot.barY(detailedAscents.toRecords(), Plot.groupX({ y: 'count' }, grouping))],
-      x: { type: 'band' },
+      color: { legend: true, type: 'categorical', ...ascentTypeColorDomain },
+      marks: [Plot.frame(), Plot.barX(detailedAscents.toRecords(), Plot.groupY({ x: 'count' }, grouping))],
+      y: { type: 'band', reverse: true },
       document,
     }),
   );
 }
 
 //#nbts@code
-let sorted = detailedAscents
-  .withColumns(
-    pl.col('numberDifficulty').min().over(pl.col('created_at').date.strftime('%Y-%U'), 'type').sub(3).alias('weekDiffMin'),
-    pl.col('numberDifficulty').max().over(pl.col('created_at').date.strftime('%Y-%U'), 'type').alias('weekDiffMax'),
-  )
-  .toRecords();
-let plot = Plot.plot({
-  grid: true,
-  color: { legend: true, type: 'categorical', domain: ['flash', 'redpoint'], range: ['#d8e135', '#dd4011'] },
-  y: {
-    ticks: boulderScores.filter((grade) => grade.font <= '7B').map((grade) => grade.score),
-    tickFormat: (v) => boulderScores.find(({ score }) => v === score)?.font,
-  },
-  marks: [
-    Plot.frame(),
-    ...['redpoint', 'flash'].map((type) =>
-      Plot.rectY(
-        sorted.filter(v => v.type === type),
-        {
-          interval: 'week',
-          x: 'created_at',
-          y1: 'weekDiffMin',
-          y2: 'weekDiffMax',
-          fill: 'type',
-        },
-      ),
-    ),
-  ],
-  document,
-});
-
 await display(
   md`
 ## Poor man's CPR
   `,
 );
-await display(plot);
+
+Plot.plot(
+  (() => {
+    const data = detailedAscents
+      .groupBy(pl.col('created_at').date.strftime('%Y-%U').alias('week'), 'type')
+      .agg(
+        pl.col('created_at').first(),
+        pl.col('numberDifficulty').min().sub(3).alias('difficultyMin'),
+        pl.col('numberDifficulty').max().alias('difficultyMax'),
+        pl.col('created_at').count().alias('count'),
+      );
+
+    return {
+      figure: true,
+      grid: true,
+      color: { legend: true, type: 'categorical', ...ascentTypeColorDomain },
+      width: 1500,
+      y: {
+        ticks: boulderScores.filter((grade) => grade.font <= '7B').map((grade) => grade.score),
+        tickFormat: (v) => boulderScores.find(({ score }) => v === score)?.font,
+      },
+      marks: [
+        Plot.frame(),
+        ...['redpoint', 'flash'].map((type) =>
+          Plot.rectY(
+            data.filter(pl.col('type').eq(pl.lit(type))).toRecords(),
+
+            {
+              interval: 'week',
+              x: 'created_at',
+
+              y1: 'difficultyMin',
+              y2: 'difficultyMax',
+              fill: 'type',
+              title: (d) => `${d.difficultyMin} - ${d.difficultyMax}`,
+              inset: 1,
+              mixBlendMode: 'color-dodge',
+            },
+          ),
+        ),
+        /*
+        Plot.rectY(data.toRecords(), { interval: 'week', x: 'created_at', y: 'count', fill: 'gray' }),
+        Plot.text(data.toRecords(), {
+          x: 'created_at',
+          y: 'count',
+          text: 'count',
+          lineAnchor: 'bottom',
+        }),
+        */
+      ],
+      document,
+    };
+  })(),
+);
+
+//#nbts@code
+import * as d3 from 'npm:d3';
+
+Plot.plot(
+  (() => {
+    const data = detailedAscents
+      .groupBy(pl.col('created_at').date.strftime('%Y-%U').alias('grouped'))
+      .agg(
+        pl.col('created_at').first().date.strftime('%Y-%m-%d').alias('date'),
+        pl.col('numberDifficulty').sum().alias('totalNumberDifficulty'),
+        pl.col('created_at').count().alias('count'),
+        pl.col('difficulty'),
+      )
+      .toRecords();
+    return {
+      figure: true,
+      x: { tickFormat: (d) => `Week ${d + 1}`, tickRotate: 90 },
+      y: { tickFormat: '', tickSize: 0 },
+      color: { scheme: 'YlGn' },
+      marginBottom: 47,
+      marks: [
+        Plot.cell(data, {
+          x: (d) => d3.utcWeek.count(d3.utcYear(new Date(d.date)), new Date(d.date)),
+          y: (d) => new Date(d.date).getUTCFullYear(),
+          fill: 'totalNumberDifficulty',
+          title: (d) =>
+            Object.entries(
+              d.difficulty.reduce((acc, grade) => {
+                if (!acc[grade]) {
+                  acc[grade] = 0;
+                }
+                acc[grade] += 1;
+                return acc;
+              }, {}),
+            )
+              .toSorted((a, b) => a[0].localeCompare(b[0]))
+              .reduce((acc, ascents) => [...acc, `${ascents[0]} x${ascents[1]}`], [] as string[])
+              .join('; '),
+          inset: 1,
+        }),
+      ],
+      document,
+    };
+  })(),
+);
+
+//#nbts@code
+Plot.plot(
+  (() => {
+    const data = detailedAscents
+      .groupBy(pl.col('created_at').date.strftime('%Y-%U').alias('grouped'))
+      .agg(
+        pl.col('created_at').first().cast(pl.Date).alias('date'),
+        pl.col('numberDifficulty').sum().alias('totalNumberDifficulty'),
+        pl.col('created_at').count().alias('count'),
+        pl.col('difficulty'),
+      )
+      .toRecords();
+    return {
+      figure: true,
+      color: { scheme: 'YlGn' },
+      marks: [
+        Plot.barX(data, {
+          interval: 'week',
+          x: 'date',
+          fill: 'totalNumberDifficulty',
+          title: (d) =>
+            Object.entries(
+              d.difficulty.reduce((acc, grade) => {
+                if (!acc[grade]) {
+                  acc[grade] = 0;
+                }
+                acc[grade] += 1;
+                return acc;
+              }, {}),
+            )
+              .toSorted((a, b) => a[0].localeCompare(b[0]))
+              .reduce((acc, ascents) => [...acc, `${ascents[0]} x${ascents[1]}`], [] as string[])
+              .join('; '),
+        }),
+      ],
+      document,
+    };
+  })(),
+);
