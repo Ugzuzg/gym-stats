@@ -70,9 +70,6 @@ let detailedAscents = ascents
   .sort(pl.col('created_at'));
 
 //#nbts@code
-detailedAscents.toRecords()[0];
-
-//#nbts@code
 let boulderScores = [
   { score: 12, v: 'VB', font: '2' },
   { score: 18, v: 'VB', font: '2+' },
@@ -107,9 +104,6 @@ detailedAscents = detailedAscents.withColumns(
   pl.col('difficulty').replace({ old: gradeToNumber }).cast(pl.Float32).alias('numberDifficulty'),
   pl.col('type').replace(['f', 'rp'], ['flash', 'redpoint']),
 );
-
-//#nbts@code
-detailedAscents.toRecords()[0];
 
 //#nbts@code
 html`${detailedAscents.getColumn('route_setter').valueCounts().sort('count', true).toHTML()}`;
@@ -167,8 +161,10 @@ Plot.plot(
       .groupBy(pl.col('created_at').date.strftime('%Y-%U').alias('week'), 'type')
       .agg(
         pl.col('created_at').first(),
-        pl.col('numberDifficulty').min().sub(3).alias('difficultyMin'),
-        pl.col('numberDifficulty').max().alias('difficultyMax'),
+        pl.col('difficulty').min().alias('difficultyMin'),
+        pl.col('difficulty').max().alias('difficultyMax'),
+        pl.col('numberDifficulty').min().sub(3).alias('numberDifficultyMin'),
+        pl.col('numberDifficulty').max().alias('numberDifficultyMax'),
         pl.col('created_at').count().alias('count'),
       );
 
@@ -191,10 +187,13 @@ Plot.plot(
               interval: 'week',
               x: 'created_at',
 
-              y1: 'difficultyMin',
-              y2: 'difficultyMax',
+              y1: 'numberDifficultyMin',
+              y2: 'numberDifficultyMax',
               fill: 'type',
-              title: (d) => `${d.difficultyMin} - ${d.difficultyMax}`,
+              title: (d) => {
+                if (d.difficultyMin === d.difficultyMax) return d.difficultyMin;
+                return `${d.difficultyMin} - ${d.difficultyMax}`;
+              },
               inset: 1,
               mixBlendMode: 'color-dodge',
             },
@@ -209,6 +208,46 @@ Plot.plot(
           lineAnchor: 'bottom',
         }),
         */
+      ],
+      document,
+    };
+  })(),
+);
+
+//#nbts@code
+Plot.plot(
+  (() => {
+    const data = detailedAscents
+      .groupBy(pl.col('created_at').date.strftime('%Y-%U').alias('grouped'))
+      .agg(
+        pl.col('created_at').first().cast(pl.Date).alias('date'),
+        pl.col('numberDifficulty').sum().alias('totalNumberDifficulty'),
+        pl.col('created_at').count().alias('count'),
+        pl.col('difficulty'),
+      )
+      .toRecords();
+    return {
+      figure: true,
+      color: { scheme: 'YlGn' },
+      marks: [
+        Plot.barX(data, {
+          interval: 'week',
+          x: 'date',
+          fill: 'totalNumberDifficulty',
+          title: (d) =>
+            Object.entries(
+              d.difficulty.reduce((acc, grade) => {
+                if (!acc[grade]) {
+                  acc[grade] = 0;
+                }
+                acc[grade] += 1;
+                return acc;
+              }, {}),
+            )
+              .toSorted((a, b) => a[0].localeCompare(b[0]))
+              .reduce((acc, ascents) => [...acc, `${ascents[0]} x${ascents[1]}`], [] as string[])
+              .join('; '),
+        }),
       ],
       document,
     };
@@ -254,46 +293,6 @@ Plot.plot(
               .reduce((acc, ascents) => [...acc, `${ascents[0]} x${ascents[1]}`], [] as string[])
               .join('; '),
           inset: 1,
-        }),
-      ],
-      document,
-    };
-  })(),
-);
-
-//#nbts@code
-Plot.plot(
-  (() => {
-    const data = detailedAscents
-      .groupBy(pl.col('created_at').date.strftime('%Y-%U').alias('grouped'))
-      .agg(
-        pl.col('created_at').first().cast(pl.Date).alias('date'),
-        pl.col('numberDifficulty').sum().alias('totalNumberDifficulty'),
-        pl.col('created_at').count().alias('count'),
-        pl.col('difficulty'),
-      )
-      .toRecords();
-    return {
-      figure: true,
-      color: { scheme: 'YlGn' },
-      marks: [
-        Plot.barX(data, {
-          interval: 'week',
-          x: 'date',
-          fill: 'totalNumberDifficulty',
-          title: (d) =>
-            Object.entries(
-              d.difficulty.reduce((acc, grade) => {
-                if (!acc[grade]) {
-                  acc[grade] = 0;
-                }
-                acc[grade] += 1;
-                return acc;
-              }, {}),
-            )
-              .toSorted((a, b) => a[0].localeCompare(b[0]))
-              .reduce((acc, ascents) => [...acc, `${ascents[0]} x${ascents[1]}`], [] as string[])
-              .join('; '),
         }),
       ],
       document,
