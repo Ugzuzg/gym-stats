@@ -1,0 +1,264 @@
+{
+  "id": 299668,
+  "name": "Green",
+  "notes": null,
+  "difficulty": "6C",
+  "grade": "vl-21",
+  "grading_system": "font",
+  "grade_proposals": [
+    [
+      "vl-1",
+      "2"
+    ],
+    [
+      "vl-2",
+      "2+"
+    ],
+    [
+      "vl-3",
+      "3-"
+    ],
+    [
+      "vl-4",
+      "3"
+    ],
+    [
+      "vl-5",
+      "3+"
+    ],
+    [
+      "vl-6",
+      "4-"
+    ],
+    [
+      "vl-7",
+      "4"
+    ],
+    [
+      "vl-8",
+      "4+"
+    ],
+    [
+      "vl-9",
+      "5-"
+    ],
+    [
+      "vl-12",
+      "5"
+    ],
+    [
+      "vl-14",
+      "5+"
+    ],
+    [
+      "vl-16",
+      "6A"
+    ],
+    [
+      "vl-17",
+      "6A+"
+    ],
+    [
+      "vl-18",
+      "6B"
+    ],
+    [
+      "vl-19",
+      "6B+"
+    ],
+    [
+      "vl-21",
+      "6C"
+    ],
+    [
+      "vl-22",
+      "6C+"
+    ],
+    [
+      "vl-23",
+      "7A"
+    ],
+    [
+      "vl-24",
+      "7A+"
+    ],
+    [
+      "vl-25",
+      "7B"
+    ],
+    [
+      "vl-26",
+      "7B+"
+    ],
+    [
+      "vl-27",
+      "7C"
+    ],
+    [
+      "vl-28",
+      "7C+"
+    ],
+    [
+      "vl-29",
+      "8A"
+    ],
+    [
+      "vl-30",
+      "8A+"
+    ],
+    [
+      "vl-31",
+      "8B"
+    ],
+    [
+      "vl-32",
+      "8B+"
+    ],
+    [
+      "vl-33",
+      "8C"
+    ],
+    [
+      "vl-34",
+      "8C+"
+    ]
+  ],
+  "steepness": null,
+  "style": "ast",
+  "updated_at": "2022-01-18 08:30:01 +0000",
+  "created_at": "2021-11-30 17:56:36 +0000",
+  "set_at": "2021-11-30 17:56:14 +0000",
+  "expiration_date": null,
+  "path": [
+    [
+      325,
+      506
+    ],
+    [
+      547,
+      474
+    ],
+    [
+      547,
+      454
+    ],
+    [
+      554,
+      434
+    ],
+    [
+      512,
+      317
+    ],
+    [
+      513,
+      205
+    ],
+    [
+      389,
+      172
+    ],
+    [
+      324,
+      479
+    ]
+  ],
+  "reference_width": 971,
+  "line_number": 2,
+  "topo_num": "74687.2.",
+  "color_1": "#008000",
+  "color_2": null,
+  "two_start_holds": null,
+  "sit_down_start": null,
+  "traverse": false,
+  "sector_name": "Ground Floor",
+  "sector_id": 706,
+  "archived": true,
+  "hold_manufacturer": null,
+  "gym_wall_id": 2794,
+  "gym_wall_name": "Branten",
+  "stats": {
+    "video_count": 0,
+    "zlag_count": 1,
+    "comment_count": 0,
+    "rating": 0,
+    "ratings_count": 0,
+    "redpoint": 1,
+    "onsight": 0,
+    "flash": 0,
+    "toprope": 0,
+    "go": 0,
+    "safety": 0,
+    "slab": 0,
+    "vertical": 0,
+    "overhanging": 0,
+    "roof": 0,
+    "hard_count": 0,
+    "soft_count": 0,
+    "zlaggable_height_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0
+    },
+    "safety_issues_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0,
+      "64": 0
+    },
+    "t": 1,
+    "f": 0,
+    "b": 0,
+    "e": 0,
+    "c": 0,
+    "s": 1
+  },
+  "gym": {
+    "id": 2076,
+    "name": "Klättercentret Gallerian",
+    "town": "Stockholm",
+    "country": "Sweden",
+    "difficulties": null,
+    "difficulties_bouldering": null,
+    "item_type": "gym",
+    "cover": "b278e125583238a9110e5ac2cc261e57",
+    "share_url": "https://zlag.vertical-life.info/en/gyms/klattercentret-gallerian",
+    "latitude": 59.3314,
+    "longitude": 18.0674,
+    "sportclimbing_grading_system": "french",
+    "bouldering_grading_system": "font",
+    "updated_at": "2024-05-31 09:49:47 +0000",
+    "published_at": null,
+    "created_at": "2020-08-13 06:16:45 +0000",
+    "boulder_count": 96,
+    "route_count": 0,
+    "ascent_count": 12104,
+    "categories": 1040,
+    "logo": "ce68d672c98919d65f4311f9c9d9bb47",
+    "sponsor_logo": null,
+    "elegible_for_boulder_training": true,
+    "virtual": true,
+    "gym_status": {
+      "virtual_active": true,
+      "checkins_enabled": false,
+      "temporarily_closed": false
+    },
+    "published": true
+  },
+  "gym_id": 2076,
+  "share_url": "https://zlag.vertical-life.info/en/routes/cb1737d0ef91668f5c1fd586ff7a6832",
+  "route_card_label": "B2.",
+  "parent_name": "Ground Floor, Branten",
+  "virtual": false,
+  "topo": "cbd7775c1ed6f6b17530e17538ae96c9",
+  "route_setter": "Robert  Rundin ",
+  "display_route_setter": true,
+  "item_type": "gym_boulder",
+  "gallery": []
+}

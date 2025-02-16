@@ -1,0 +1,339 @@
+{
+  "id": 485651,
+  "name": "green",
+  "notes": null,
+  "difficulty": "6C",
+  "grade": "vl-21",
+  "grading_system": "font",
+  "grade_proposals": [
+    [
+      "vl-1",
+      "2"
+    ],
+    [
+      "vl-2",
+      "2+"
+    ],
+    [
+      "vl-3",
+      "3-"
+    ],
+    [
+      "vl-4",
+      "3"
+    ],
+    [
+      "vl-5",
+      "3+"
+    ],
+    [
+      "vl-6",
+      "4-"
+    ],
+    [
+      "vl-7",
+      "4"
+    ],
+    [
+      "vl-8",
+      "4+"
+    ],
+    [
+      "vl-9",
+      "5-"
+    ],
+    [
+      "vl-12",
+      "5"
+    ],
+    [
+      "vl-14",
+      "5+"
+    ],
+    [
+      "vl-16",
+      "6A"
+    ],
+    [
+      "vl-17",
+      "6A+"
+    ],
+    [
+      "vl-18",
+      "6B"
+    ],
+    [
+      "vl-19",
+      "6B+"
+    ],
+    [
+      "vl-21",
+      "6C"
+    ],
+    [
+      "vl-22",
+      "6C+"
+    ],
+    [
+      "vl-23",
+      "7A"
+    ],
+    [
+      "vl-24",
+      "7A+"
+    ],
+    [
+      "vl-25",
+      "7B"
+    ],
+    [
+      "vl-26",
+      "7B+"
+    ],
+    [
+      "vl-27",
+      "7C"
+    ],
+    [
+      "vl-28",
+      "7C+"
+    ],
+    [
+      "vl-29",
+      "8A"
+    ],
+    [
+      "vl-30",
+      "8A+"
+    ],
+    [
+      "vl-31",
+      "8B"
+    ],
+    [
+      "vl-32",
+      "8B+"
+    ],
+    [
+      "vl-33",
+      "8C"
+    ],
+    [
+      "vl-34",
+      "8C+"
+    ]
+  ],
+  "steepness": null,
+  "style": null,
+  "updated_at": "2024-02-13 09:02:01 +0000",
+  "created_at": "2023-12-21 16:01:54 +0000",
+  "set_at": "2023-12-21 15:58:30 +0000",
+  "expiration_date": null,
+  "path": [
+    [
+      240,
+      94
+    ],
+    [
+      548,
+      93
+    ],
+    [
+      537,
+      210
+    ],
+    [
+      541,
+      399
+    ],
+    [
+      568,
+      610
+    ],
+    [
+      262,
+      613
+    ],
+    [
+      231,
+      409
+    ],
+    [
+      230,
+      214
+    ]
+  ],
+  "reference_width": 971,
+  "line_number": 1,
+  "topo_num": "77548.1.",
+  "color_1": "#32cd32",
+  "color_2": null,
+  "two_start_holds": null,
+  "sit_down_start": null,
+  "traverse": false,
+  "sector_name": "Nedervåning bouldering",
+  "sector_id": 3838,
+  "archived": true,
+  "hold_manufacturer": null,
+  "gym_wall_id": 6119,
+  "gym_wall_name": "Blocket",
+  "stats": {
+    "video_count": 0,
+    "zlag_count": 4,
+    "comment_count": 0,
+    "rating": 3,
+    "ratings_count": 2,
+    "redpoint": 4,
+    "onsight": 0,
+    "flash": 0,
+    "toprope": 0,
+    "go": 0,
+    "safety": 0,
+    "slab": 0,
+    "vertical": 0,
+    "overhanging": 0,
+    "roof": 0,
+    "hard_count": 0,
+    "soft_count": 0,
+    "zlaggable_height_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0
+    },
+    "safety_issues_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0,
+      "64": 0
+    },
+    "t": 0,
+    "f": 0,
+    "b": 0,
+    "e": 0,
+    "c": 0,
+    "s": 0
+  },
+  "gym": {
+    "id": 612,
+    "name": "Karbin Klätterhall",
+    "town": "Hägersten-Liljeholmen",
+    "country": "Sweden",
+    "difficulties": {
+      "vl-1": 0,
+      "vl-2": 0,
+      "vl-3": 0,
+      "vl-4": 0,
+      "vl-5": 0,
+      "vl-6": 13,
+      "vl-7": 15,
+      "vl-8": 20,
+      "vl-9": 14,
+      "vl-10": 0,
+      "vl-11": 0,
+      "vl-12": 5,
+      "vl-13": 0,
+      "vl-14": 8,
+      "vl-15": 0,
+      "vl-16": 8,
+      "vl-17": 3,
+      "vl-18": 8,
+      "vl-19": 4,
+      "vl-20": 0,
+      "vl-21": 10,
+      "vl-22": 5,
+      "vl-23": 7,
+      "vl-24": 4,
+      "vl-25": 5,
+      "vl-26": 2,
+      "vl-27": 8,
+      "vl-28": 2,
+      "vl-29": 2,
+      "vl-30": 0,
+      "vl-31": 1,
+      "vl-32": 0,
+      "vl-33": 0,
+      "vl-34": 0,
+      "vl-35": 0,
+      "vl-36": 0,
+      "vl-37": 0,
+      "vl-38": 0,
+      "vl-39": 0
+    },
+    "difficulties_bouldering": {
+      "vl-1": 0,
+      "vl-2": 0,
+      "vl-3": 0,
+      "vl-4": 8,
+      "vl-5": 0,
+      "vl-6": 0,
+      "vl-7": 15,
+      "vl-8": 0,
+      "vl-9": 0,
+      "vl-10": 0,
+      "vl-11": 0,
+      "vl-12": 27,
+      "vl-13": 0,
+      "vl-14": 0,
+      "vl-15": 0,
+      "vl-16": 7,
+      "vl-17": 6,
+      "vl-18": 13,
+      "vl-19": 9,
+      "vl-20": 0,
+      "vl-21": 10,
+      "vl-22": 6,
+      "vl-23": 12,
+      "vl-24": 5,
+      "vl-25": 8,
+      "vl-26": 1,
+      "vl-27": 6,
+      "vl-28": 6,
+      "vl-29": 3,
+      "vl-30": 2,
+      "vl-31": 0,
+      "vl-32": 0,
+      "vl-33": 0,
+      "vl-34": 0
+    },
+    "item_type": "gym",
+    "cover": "9cfb96b70dcf3dacdea997218c5fbd06",
+    "share_url": "https://zlag.vertical-life.info/en/gyms/karbin-klatterhall",
+    "latitude": 59.2904,
+    "longitude": 18.0163,
+    "sportclimbing_grading_system": "french",
+    "bouldering_grading_system": "font",
+    "updated_at": "2024-02-23 10:15:10 +0000",
+    "published_at": "2020-04-07 11:32:01 +0000",
+    "created_at": "2020-04-07 11:32:01 +0000",
+    "boulder_count": 144,
+    "route_count": 144,
+    "ascent_count": 11788,
+    "categories": 24,
+    "logo": "6c84d0dbc18f28de820f00b760067832",
+    "sponsor_logo": null,
+    "elegible_for_boulder_training": true,
+    "virtual": false,
+    "gym_status": {
+      "checkins_enabled": true,
+      "checkins_url": "https://gyms.vertical-life.info/en/karbin-klatterhall/checkins",
+      "temporarily_closed": false
+    },
+    "published": true
+  },
+  "gym_id": 612,
+  "share_url": "https://zlag.vertical-life.info/en/routes/c8d36e3dd5ba0e1966fdb0848858ba69",
+  "route_card_label": "1.",
+  "parent_name": "Nedervåning bouldering, Blocket",
+  "virtual": false,
+  "topo": "35238acc3afd95258b310fa02850cd36",
+  "route_setter": "N.N.",
+  "display_route_setter": true,
+  "item_type": "gym_boulder",
+  "gallery": []
+}

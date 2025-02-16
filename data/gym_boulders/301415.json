@@ -1,0 +1,276 @@
+{
+  "id": 301415,
+  "name": "Green",
+  "notes": null,
+  "difficulty": "6A+",
+  "grade": "vl-17",
+  "grading_system": "font",
+  "grade_proposals": [
+    [
+      "vl-1",
+      "2"
+    ],
+    [
+      "vl-2",
+      "2+"
+    ],
+    [
+      "vl-3",
+      "3-"
+    ],
+    [
+      "vl-4",
+      "3"
+    ],
+    [
+      "vl-5",
+      "3+"
+    ],
+    [
+      "vl-6",
+      "4-"
+    ],
+    [
+      "vl-7",
+      "4"
+    ],
+    [
+      "vl-8",
+      "4+"
+    ],
+    [
+      "vl-9",
+      "5-"
+    ],
+    [
+      "vl-12",
+      "5"
+    ],
+    [
+      "vl-14",
+      "5+"
+    ],
+    [
+      "vl-16",
+      "6A"
+    ],
+    [
+      "vl-17",
+      "6A+"
+    ],
+    [
+      "vl-18",
+      "6B"
+    ],
+    [
+      "vl-19",
+      "6B+"
+    ],
+    [
+      "vl-21",
+      "6C"
+    ],
+    [
+      "vl-22",
+      "6C+"
+    ],
+    [
+      "vl-23",
+      "7A"
+    ],
+    [
+      "vl-24",
+      "7A+"
+    ],
+    [
+      "vl-25",
+      "7B"
+    ],
+    [
+      "vl-26",
+      "7B+"
+    ],
+    [
+      "vl-27",
+      "7C"
+    ],
+    [
+      "vl-28",
+      "7C+"
+    ],
+    [
+      "vl-29",
+      "8A"
+    ],
+    [
+      "vl-30",
+      "8A+"
+    ],
+    [
+      "vl-31",
+      "8B"
+    ],
+    [
+      "vl-32",
+      "8B+"
+    ],
+    [
+      "vl-33",
+      "8C"
+    ],
+    [
+      "vl-34",
+      "8C+"
+    ]
+  ],
+  "steepness": null,
+  "style": null,
+  "updated_at": "2022-01-25 08:11:00 +0000",
+  "created_at": "2021-12-07 14:37:53 +0000",
+  "set_at": "2021-12-07 14:37:42 +0000",
+  "expiration_date": null,
+  "path": [
+    [
+      49,
+      591
+    ],
+    [
+      47,
+      552
+    ],
+    [
+      56,
+      535
+    ],
+    [
+      35,
+      94
+    ],
+    [
+      342,
+      104
+    ],
+    [
+      373,
+      95
+    ],
+    [
+      483,
+      84
+    ],
+    [
+      483,
+      526
+    ],
+    [
+      493,
+      549
+    ],
+    [
+      495,
+      589
+    ],
+    [
+      390,
+      549
+    ]
+  ],
+  "reference_width": 971,
+  "line_number": 1,
+  "topo_num": "74689.1.",
+  "color_1": "#008000",
+  "color_2": null,
+  "two_start_holds": null,
+  "sit_down_start": null,
+  "traverse": false,
+  "sector_name": "Ground Floor",
+  "sector_id": 706,
+  "archived": true,
+  "hold_manufacturer": null,
+  "gym_wall_id": 2795,
+  "gym_wall_name": "Vänstra hörnet",
+  "stats": {
+    "video_count": 0,
+    "zlag_count": 4,
+    "comment_count": 0,
+    "rating": 3,
+    "ratings_count": 2,
+    "redpoint": 1,
+    "onsight": 0,
+    "flash": 3,
+    "toprope": 0,
+    "go": 0,
+    "safety": 2,
+    "slab": 0,
+    "vertical": 0,
+    "overhanging": 0,
+    "roof": 0,
+    "hard_count": 0,
+    "soft_count": 0,
+    "zlaggable_height_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0
+    },
+    "safety_issues_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0,
+      "64": 0
+    },
+    "t": 0,
+    "f": 0,
+    "b": 0,
+    "e": 0,
+    "c": 0,
+    "s": 0
+  },
+  "gym": {
+    "id": 2076,
+    "name": "Klättercentret Gallerian",
+    "town": "Stockholm",
+    "country": "Sweden",
+    "difficulties": null,
+    "difficulties_bouldering": null,
+    "item_type": "gym",
+    "cover": "b278e125583238a9110e5ac2cc261e57",
+    "share_url": "https://zlag.vertical-life.info/en/gyms/klattercentret-gallerian",
+    "latitude": 59.3314,
+    "longitude": 18.0674,
+    "sportclimbing_grading_system": "french",
+    "bouldering_grading_system": "font",
+    "updated_at": "2024-05-31 09:49:47 +0000",
+    "published_at": null,
+    "created_at": "2020-08-13 06:16:45 +0000",
+    "boulder_count": 96,
+    "route_count": 0,
+    "ascent_count": 12104,
+    "categories": 1040,
+    "logo": "ce68d672c98919d65f4311f9c9d9bb47",
+    "sponsor_logo": null,
+    "elegible_for_boulder_training": true,
+    "virtual": true,
+    "gym_status": {
+      "virtual_active": true,
+      "checkins_enabled": false,
+      "temporarily_closed": false
+    },
+    "published": true
+  },
+  "gym_id": 2076,
+  "share_url": "https://zlag.vertical-life.info/en/routes/8980e8f2840b29d6cb7be5763f1c6f5b",
+  "route_card_label": "VH3.",
+  "parent_name": "Ground Floor, Vänstra hörnet",
+  "virtual": false,
+  "topo": "581dbd3f08b316ce8cb57f1e26acc4f3",
+  "route_setter": "James Thanawat",
+  "display_route_setter": true,
+  "item_type": "gym_boulder",
+  "gallery": []
+}

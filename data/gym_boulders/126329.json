@@ -1,0 +1,243 @@
+{
+  "id": 126329,
+  "name": "Bright yellow",
+  "notes": null,
+  "difficulty": "Röd tejp",
+  "grade": "vl-16",
+  "grading_system": "vl_gym_bouldering",
+  "grade_proposals": [
+    [
+      "vl-8",
+      "Grön tejp"
+    ],
+    [
+      "vl-9",
+      "Blå tejp"
+    ],
+    [
+      "vl-16",
+      "Röd tejp"
+    ],
+    [
+      "vl-20",
+      "Svart tejp"
+    ],
+    [
+      "vl-25",
+      "Vit tejp"
+    ],
+    [
+      "vl-30",
+      "Silver tejp"
+    ]
+  ],
+  "steepness": 7,
+  "style": "t",
+  "updated_at": "2020-02-03 15:18:20 +0000",
+  "created_at": "2019-12-17 15:06:15 +0000",
+  "set_at": "2019-12-17 15:06:04 +0000",
+  "expiration_date": "2020-06-17 00:00:00 +0000",
+  "path": [
+    [
+      553,
+      62
+    ],
+    [
+      458,
+      478
+    ],
+    [
+      833,
+      489
+    ],
+    [
+      920,
+      501
+    ],
+    [
+      907,
+      99
+    ],
+    [
+      865,
+      75
+    ],
+    [
+      858,
+      80
+    ]
+  ],
+  "reference_width": 972,
+  "line_number": 2,
+  "topo_num": "65220.2.",
+  "color_1": "#ffff00",
+  "color_2": null,
+  "two_start_holds": null,
+  "sit_down_start": null,
+  "traverse": false,
+  "sector_name": "Lower Floor",
+  "sector_id": 459,
+  "archived": true,
+  "hold_manufacturer": null,
+  "gym_wall_id": 1851,
+  "gym_wall_name": "The Cave",
+  "stats": {
+    "video_count": 0,
+    "zlag_count": 7,
+    "comment_count": 0,
+    "rating": 0,
+    "ratings_count": 0,
+    "redpoint": 2,
+    "onsight": 0,
+    "flash": 5,
+    "toprope": 0,
+    "go": 0,
+    "safety": 2,
+    "slab": 0,
+    "vertical": 0,
+    "overhanging": 0,
+    "roof": 0,
+    "hard_count": 0,
+    "soft_count": 0,
+    "zlaggable_height_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0
+    },
+    "safety_issues_count": {
+      "1": 0,
+      "2": 0,
+      "4": 0,
+      "8": 0,
+      "16": 0,
+      "32": 0,
+      "64": 0
+    },
+    "t": 7,
+    "f": 0,
+    "b": 0,
+    "e": 0,
+    "c": 0,
+    "s": 0
+  },
+  "gym": {
+    "id": 161,
+    "name": "Klätterverket Gasverket",
+    "town": "Stockholm",
+    "country": "Sweden",
+    "difficulties": {
+      "vl-1": 0,
+      "vl-2": 0,
+      "vl-3": 0,
+      "vl-4": 2,
+      "vl-5": 0,
+      "vl-6": 2,
+      "vl-7": 4,
+      "vl-8": 4,
+      "vl-9": 4,
+      "vl-10": 0,
+      "vl-11": 0,
+      "vl-12": 5,
+      "vl-13": 0,
+      "vl-14": 7,
+      "vl-15": 0,
+      "vl-16": 10,
+      "vl-17": 9,
+      "vl-18": 8,
+      "vl-19": 9,
+      "vl-20": 0,
+      "vl-21": 10,
+      "vl-22": 8,
+      "vl-23": 8,
+      "vl-24": 10,
+      "vl-25": 5,
+      "vl-26": 6,
+      "vl-27": 5,
+      "vl-28": 2,
+      "vl-29": 2,
+      "vl-30": 1,
+      "vl-31": 1,
+      "vl-32": 0,
+      "vl-33": 0,
+      "vl-34": 0,
+      "vl-35": 0,
+      "vl-36": 0,
+      "vl-37": 0,
+      "vl-38": 0,
+      "vl-39": 0
+    },
+    "difficulties_bouldering": {
+      "vl-1": 0,
+      "vl-2": 0,
+      "vl-3": 0,
+      "vl-4": 0,
+      "vl-5": 0,
+      "vl-6": 0,
+      "vl-7": 0,
+      "vl-8": 17,
+      "vl-9": 28,
+      "vl-10": 0,
+      "vl-11": 0,
+      "vl-12": 0,
+      "vl-13": 0,
+      "vl-14": 0,
+      "vl-15": 0,
+      "vl-16": 36,
+      "vl-17": 0,
+      "vl-18": 0,
+      "vl-19": 0,
+      "vl-20": 42,
+      "vl-21": 0,
+      "vl-22": 0,
+      "vl-23": 0,
+      "vl-24": 0,
+      "vl-25": 29,
+      "vl-26": 0,
+      "vl-27": 0,
+      "vl-28": 0,
+      "vl-29": 0,
+      "vl-30": 11,
+      "vl-31": 0,
+      "vl-32": 0,
+      "vl-33": 0,
+      "vl-34": 0
+    },
+    "item_type": "gym",
+    "cover": "f5304074d78ac799c7801282c1c502e8",
+    "share_url": "https://zlag.vertical-life.info/en/gyms/klatterverket-gasverket",
+    "latitude": 59.3585,
+    "longitude": 18.0904,
+    "sportclimbing_grading_system": "french",
+    "bouldering_grading_system": "vl_gym_bouldering",
+    "updated_at": "2023-10-20 09:40:05 +0000",
+    "published_at": "2019-09-27 18:13:00 +0000",
+    "created_at": "2019-08-15 12:16:04 +0000",
+    "boulder_count": 163,
+    "route_count": 122,
+    "ascent_count": 36489,
+    "categories": 24,
+    "logo": "43f0cb235b672fd440b3aa9c2a285e95",
+    "sponsor_logo": null,
+    "elegible_for_boulder_training": false,
+    "virtual": false,
+    "gym_status": {
+      "checkins_enabled": true,
+      "checkins_url": "https://gyms.vertical-life.info/en/klatterverket-gasverket/checkins",
+      "temporarily_closed": false
+    },
+    "published": true
+  },
+  "gym_id": 161,
+  "share_url": "https://zlag.vertical-life.info/en/routes/3cbe01999437621be588e04cf0830ad1",
+  "route_card_label": "5.",
+  "parent_name": "Lower Floor, The Cave",
+  "virtual": false,
+  "topo": "e20915957f75336740e114df4197cf11",
+  "route_setter": "Björn Nilsson",
+  "display_route_setter": true,
+  "item_type": "gym_boulder",
+  "gallery": []
+}

@@ -1,7 +1,10 @@
 import fsSync from 'node:fs';
 import fs from 'node:fs/promises';
+import path from 'node:path';
 
 const me = 230474;
+const wilhelm = 56689;
+const user = me;
 
 const fileExists = async (path) => {
   try {
@@ -42,7 +45,7 @@ const getAccessToken = async () => {
   do {
     console.log(`Fetching ${offset} to ${offset + limit}`);
     const response = await fetch(
-      `https://vlcapi.vertical-life.info/ascent/v1/app/users/${me}/ascents?offset=${offset}&limit=${limit}&zlaggable_filter=gym_bouldering&sorting=grade`,
+      `https://vlcapi.vertical-life.info/ascent/v1/app/users/${user}/ascents?offset=${offset}&limit=${limit}&zlaggable_filter=gym_bouldering&sorting=grade`,
       {
         method: 'GET',
         headers: {
@@ -54,14 +57,14 @@ const getAccessToken = async () => {
     offset += limit;
     ascents.push(...singleReponse);
   } while (singleReponse.length > 0);
-  const ascentsStream = fsSync.createWriteStream('./data/ascents.jsonl');
+  const ascentsStream = fsSync.createWriteStream(
+    `./data/ascents_${user}.jsonl`,
+  );
   for (const ascent of ascents) {
     ascentsStream.write(JSON.stringify(ascent));
     ascentsStream.write('\n');
   }
   ascentsStream.close();
-
-  const bouldersStream = fsSync.createWriteStream('./data/gym_boulders.jsonl');
 
   for (let i = 0; i < ascents.length; i++) {
     const ascent = ascents[i];
@@ -93,10 +96,17 @@ const getAccessToken = async () => {
 
       return result;
     })();
+  }
 
+  const bouldersStream = fsSync.createWriteStream('./data/gym_boulders.jsonl');
+  for (const p of await fs.readdir('./data/gym_boulders')) {
+    const gymBoulder = JSON.parse(
+      await fs.readFile(path.join('./data/gym_boulders', p), 'utf8'),
+    );
     bouldersStream.write(JSON.stringify(gymBoulder));
     bouldersStream.write('\n');
   }
+
   bouldersStream.close();
   process.stdout.write('\n');
 })();
